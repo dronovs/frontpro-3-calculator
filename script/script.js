@@ -43,18 +43,20 @@ function calculator () {
         console.log(usersNumbers);
         return usersNumbers;
     }
-    
+
     function calcResult(operands, operator, usersNumbers) {
-        switch (operator) {
-            case '+': result = usersNumbers.reduce((sum, current) => sum + current);
-            break;
-            case '-': result = usersNumbers.reduce((sum, current) => sum - current);
-                break;
-            case '*': result = usersNumbers.reduce((sum, current) => sum * current);
-                break;
-            case '/': result = usersNumbers.reduce((sum, current) => sum / current);
-                break;
-        }
+        result = usersNumbers.reduce((sum, current) => {
+            switch (operator) {
+                case '+':
+                    return (sum += current);
+                case '-':
+                    return (sum -= current);
+                case '*':
+                    return (sum *= current);
+                case '/':
+                    return (sum /= current);
+            }
+        })
         console.log(result);
         return result;
     }
