@@ -10,8 +10,7 @@ function calculator () {
     let result = 0;
 
     function askUser(message) {
-        message = prompt(message);
-        return message;
+        return prompt(message);
     }
 
     function checkTotalAmountOfNumbers(totalAmount, minValue, maxValue) {
