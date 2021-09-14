@@ -42,12 +42,26 @@ function calculator () {
         }
         console.log(usersNumbers);
         return usersNumbers;
+
+        // for (let i = 0; i < totalAmountOfOperands; i++) {
+        //     usersNumbers.push(+askUser('Enter your operand!'));
+        // }
+        // console.log(usersNumbers);
+        // return usersNumbers;
     }
-    
+
+    // function checkUserNumber(number) {
+    //     for (let i = 0; i <= number.length - 1; i++) {
+    //         if (isNaN(number[i])) {
+    //             number[i] = +askUser('Enter a NUMBER please');
+    //         }
+    //     }
+    // }
+
     function calcResult(operands, operator, usersNumbers) {
         switch (operator) {
             case '+': result = usersNumbers.reduce((sum, current) => sum + current);
-            break;
+                break;
             case '-': result = usersNumbers.reduce((sum, current) => sum - current);
                 break;
             case '*': result = usersNumbers.reduce((sum, current) => sum * current);
